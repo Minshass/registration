@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:qr_flutter/qr_flutter.dart';
 
-class reg extends StatefulWidget {
-  const reg({Key? key}) : super(key: key);
+class Scanner extends StatefulWidget {
+  const Scanner({Key? key}) : super(key: key);
 
   @override
-  State<reg> createState() => _regState();
+  State<Scanner> createState() => _ScannerState();
 }
 
-class _regState extends State<reg> {
+class _ScannerState extends State<Scanner> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -18,24 +18,15 @@ class _regState extends State<reg> {
           children: [
             SizedBox(
               height: 200,
-        ),
-            Container(
-              height: 100,
-              width: 100,
-              child: Image.asset('C:\Users\SJC\Downloads\login image.jpg')),
+            ),
+            CircleAvatar(radius: 50,
+              child: Icon(Icons.person,size: 100,),),
             SizedBox(
               height: 100,
             ),
-            Container(
-              height: 200,
-              width: 200,
-              child: Image.asset('images/Qr.png'),
-
-
-
-            ),
-            QrImage(
+            QrImageView(
               data: '1234567890',
+              version: QrVersions.auto,
               size: 200.0,
             ),
           ],
@@ -44,3 +35,5 @@ class _regState extends State<reg> {
     );
   }
 }
+
+

@@ -3,14 +3,13 @@ class Reg extends StatefulWidget {
   const Reg ({Key? key}) : super(key: key);
 
   @override
-  State<Reg> createState() => _MyAppState();
+  State<Reg> createState() => _RegState();
 }
 
-class _MyAppState extends State<Reg> {
+class _RegState extends State<Reg> {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
+    return  Scaffold(
         appBar: AppBar(
           backgroundColor: Colors.teal,
         title:Center(
@@ -55,12 +54,12 @@ class _MyAppState extends State<Reg> {
           ),
         ),
       SizedBox(height: 30),
-      ElevatedButton(style: ElevatedButton.styleFrom(primary: Colors.teal,fixedSize: Size(100,50)),
+      ElevatedButton(style: ElevatedButton.styleFrom(backgroundColor: Colors.teal,fixedSize: Size(100,50)),
         onPressed: () {},
         child: Text('Registration',style: TextStyle(fontSize: 20,color: Colors.white),),
       ),
   ]
-    ),))
+    ),)
     );
   }
 }
