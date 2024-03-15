@@ -28,6 +28,7 @@ class _ContactState extends State<Contact> {
               children: [
                 Icon(Icons.phone),
                 Text('+91 9456738456'),
+                SizedBox(height: 40,),
               ],
             ),
           ),
@@ -37,9 +38,9 @@ class _ContactState extends State<Contact> {
             child: Row(
               children: [
                 Icon(Icons.email),
-                Text('minsha1234@gmail.com'),
+                Text('minshaa1234@gmail.com'),
                 SizedBox(height: 40,),
-              ],
+          ],
             ),
           )
         ],

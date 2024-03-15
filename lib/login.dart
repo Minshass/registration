@@ -20,7 +20,7 @@ class _LoginState extends State<Login> {
         ),),
       backgroundColor: Colors.teal,
       body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 40),
+       padding: const EdgeInsets.symmetric(horizontal: 40),
         child:Column(mainAxisAlignment: MainAxisAlignment.center,
             children: [
               TextField(

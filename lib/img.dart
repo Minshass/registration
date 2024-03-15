@@ -15,7 +15,9 @@ class _PictureState extends State<Picture> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.cyan,
-      body:  MobileScanner(
+      body: Column(
+        children: [
+        MobileScanner(
         // fit: BoxFit.contain,
         onDetect: (capture) {
           final List<Barcode> barcodes = capture.barcodes;
@@ -24,6 +26,9 @@ class _PictureState extends State<Picture> {
             debugPrint('Barcode found! ${barcode.rawValue}');
           }
         },
+      ),
+          TextField(style: TextStyle(color: Colors.white),),
+    ],
       ),
     );
   }
