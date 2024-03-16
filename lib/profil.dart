@@ -17,7 +17,7 @@ class _ContactState extends State<Contact> {
           SizedBox(height: 200,),
           CircleAvatar(
             radius: 40,
-            child: Icon(Icons.person,
+              child: Icon(Icons.person,
               size:40 ,),
           ),
           Text('beautiful',style: TextStyle(fontStyle: FontStyle.italic),),

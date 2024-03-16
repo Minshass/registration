@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:registration/profil.dart';
+import 'package:registration/reg.dart';
+import 'package:registration/scan.dart';
 
 class Login extends StatefulWidget {
   const Login({Key? key}) : super(key: key);
@@ -27,9 +30,8 @@ class _LoginState extends State<Login> {
                 obscureText: false,
                 decoration: InputDecoration(
                     border: OutlineInputBorder(),
-                    labelText: 'enter your roll no'
-
-
+                    labelText: 'enter your roll no',
+                  labelStyle: TextStyle(color:Colors.white)
                 ),
               ),
               SizedBox(height: 15),
@@ -37,19 +39,25 @@ class _LoginState extends State<Login> {
                 obscureText: false,
                 decoration: InputDecoration(
                     border: OutlineInputBorder(),
-                    labelText: 'enter your password'
+                    labelText: 'enter your password',
+                    labelStyle: TextStyle(color:Colors.white)
                 ),
               ),
               SizedBox(height: 30),
-              ElevatedButton(style: ElevatedButton.styleFrom(fixedSize: Size(100,50)),
-                onPressed: () {},
-                child: Text('login',style: TextStyle(fontSize: 20,color: Colors.white),),
+              ElevatedButton(style: ElevatedButton.styleFrom(fixedSize: Size(300,80)),
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const Reg()),
+                  );
+                },
+                child: Text('login',style: TextStyle(fontSize: 30,color: Colors.white),),
               ),
               SizedBox(height: 30),
-              TextButton(onPressed: (){ Navigator.push(context, MaterialPageRoute(builder: (context)=>Login(),
-              ));
-              },
-                  child: Text('Dont have an account?Register now',))
+             TextButton(onPressed: (){ Navigator.push(
+    context,
+    MaterialPageRoute(builder: (context) => const Reg()));},
+           child: Text('Dont have an account?Register now',)),
             ]
         ),
       ),
