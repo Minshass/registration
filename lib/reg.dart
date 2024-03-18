@@ -23,6 +23,7 @@ class _RegState extends State<Reg> {
     print(_rollno.text);
     print(_email.text);
     print(_password.text);
+
     Uri uri = Uri.parse('https://scnner-web.onrender.com/api/register');
     var response = await http.post(uri,
         headers: <String, String>{
